@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html id="page">
+
+<head>
+    <title>Native JS Text-To-Speech</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body" class="container-fluid px-0 vh-100 d-flex justify-content-center align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Native JS Text-To-Speech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="darkModeToggle" class="nav-link active" aria-current="page" href="#"
+                            onclick="darkModeSwitch()">Enable Dark Mode</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <div class="container">
+        <form class="w-50 ms-auto me-auto" id="speechForm">
+            <div class="mb-3">
+                <label id="inputText" for="textForSpeech" class="form-label">Enter text you would like to change to
+                    speech:</label>
+                <textarea class="form-control mt-2" id="textForSpeech"></textarea>
+                <input type="submit" value="Speak!" class="btn btn-primary mt-2">
+                <input type="button" value="Clear" class="btn btn-danger mt-2" onclick="clearText()">
+            </div>
+        </form>
+    </div>
+</body>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/native-translator.js"></script>
+
+</html>
